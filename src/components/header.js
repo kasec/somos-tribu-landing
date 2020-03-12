@@ -1,42 +1,31 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+// const themes = {
+//   sun: {
+//     value: 'sun',
+//     iconURl: 'https://image.flaticon.com/icons/svg/890/890347.svg'
+//   },
+//   moon: {
+//     value: 'moon',
+//     iconURl: 'https://image.flaticon.com/icons/svg/1415/1415431.svg'
+//   }
+// }
+
+const Header = () => {
+ return (
+  <header className="header"
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+    <img className="logo" src="./17326157-logo.png" alt="logo"/>
+    <div className="main-menu">
+      <a href="#" className="button -active">Who We Are?</a>
+      <a href="#" className="button">What Can We Do?</a>
+      <a href="#" className="button">Contact Us</a>
+      <a href="#">
+         <img className="themeicon" src={'https://image.flaticon.com/icons/svg/890/890347.svg'} alt="sun icon"/>
+      </a>
     </div>
   </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  )  
 }
 
 export default Header

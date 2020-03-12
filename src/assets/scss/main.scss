@@ -1,0 +1,122 @@
+$font-stack: 'montserrat', Helvetica, sans-serif;
+
+//  default colors was get it from logo image with https://color.adobe.com
+$primary-color: #f2e749;
+$secondary-color: #d0d5d9;
+$third-color: #bfb63b;
+$fourth-color: #736e2c;
+
+$black-color: #0d0d0d;
+$white-color: #f5f5f5;
+
+body {
+  font: 100% $font-stack;
+  background-color: $white-color;
+  color: $black-color;
+  margin: 0;
+}
+main {
+  padding: 5em 0;
+}
+
+.text.-marked {
+  font-weight: 600;
+  padding: .5em;
+  background-color: $primary-color;
+  text-align: center;
+  color: $black-color;
+  font-size: large;
+}
+// add files with basic, helpers, etc..
+.blink_me {
+  display: inline-block;
+  width: .5em;
+  background-color: $primary-color;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.header {
+  height: 4em;
+  background-color: $black-color;
+}
+
+.header > .logo {
+  max-width: 10rem;
+  padding-left: .5rem;
+  height: inherit;
+}
+
+.main-menu {
+  float: right;
+  height: 100%;
+}
+
+.main-menu > .button {
+  float: left;
+  color: $white-color;
+  text-align: center;
+  padding: .8em .8em 0 .8em;
+  text-decoration: none;
+  font-size: 1em; 
+  line-height: 3em;
+  font-weight: 600;
+}
+.main-menu > a > .themeicon {
+  height: 1.5em;
+  margin-top: 1.5em;
+  margin-right: 1em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+/*no se recomienda agregar propiedades de posicion en los componentes y elementos para eso hay que agregar helpers para agregarselos directamente al tag, siempre y cuando desees hacerlo reusable */
+
+.main-menu > .button:hover {
+  border-bottom: 4px solid $primary-color;
+}
+.main-menu > .button.-active {
+  border-top: .8em solid $primary-color;
+  padding-top: 0;
+}
+
+.ban {
+  background-color: $white-color;
+  padding: .01em;
+}
+.ban > .bantext {
+  text-align: center;
+  color: $black-color;
+}
+.ban > .bantext > .-marked {
+  font-weight: 600;
+  padding: .5em;
+  background-color: $primary-color;
+}
+
+@media screen and (max-width: 660px) {
+  .main-menu > .button {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header {
+    height: initial;
+  }
+  .main-menu > a > .themeicon {
+    padding-bottom: .5em;
+  }
+  .main-menu {
+    float: none;
+  }
+}
+@media screen and (max-width: 336px) {
+  .ban > .bantext > .-marked {
+    line-height: 3em;
+  }
+}
