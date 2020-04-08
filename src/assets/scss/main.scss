@@ -9,6 +9,7 @@ $fourth-color: #736e2c;
 $black-color: #0d0d0d;
 $white-color: #f5f5f5;
 
+@import './footer.scss';
 body {
   font: 100% $font-stack;
   background-color: $white-color;

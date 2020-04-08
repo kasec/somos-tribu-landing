@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import Ban from "./ban"
 
 const Layout = ({ children }) => {
@@ -28,15 +29,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          <center>
-            © {new Date().getFullYear()}, Built with Gatsby.
-            Powered By Netlify,
-            Vue Official Sponsored
-          </center>
-          <center><p>Creative Commons</p></center>
-        </footer>
       </div>
+      <Footer/>
     </>
   )
 }
